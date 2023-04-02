@@ -1,0 +1,38 @@
+{
+    "name": "vite-tailwind",
+    "private": true,
+    "version": "0.0.0",
+    "main": "./dist/tailwind-vue.umd.js",
+    "module": "./dist/tailwind-vue.es.js",
+    "types": "./types/index.d.ts",
+    "files": [
+        "dist",
+        "types"
+    ],
+    "exports": {
+        ".": {
+            "import": "./dist/tailwind-vue.es.js",
+            "require": "./dist/tailwind-vue.umd.js"
+        },
+        "./dist/style.css": "./dist/style.css"
+    },
+    "scripts": {
+        "dev": "vite",
+        "build": "vue-tsc && vite build",
+        "preview": "vite preview"
+    },
+    "dependencies": {
+        "postcss-import": "^15.1.0",
+        "sass": "^1.60.0",
+        "unplugin-auto-import": "^0.15.2",
+        "vue": "^3.2.47",
+        "vue-tsc": "^1.2.0"
+    },
+    "devDependencies": {
+        "@vitejs/plugin-vue": "^4.1.0",
+        "autoprefixer": "^10.4.14",
+        "postcss": "^8.4.21",
+        "tailwindcss": "^3.3.1",
+        "vite": "^4.2.0"
+    }
+}
